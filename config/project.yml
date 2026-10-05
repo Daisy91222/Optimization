@@ -1,0 +1,15 @@
+project:
+  name: Multi-store Display Resource Efficiency & Allocation Optimization
+  demo_seed: 8451
+  model_version: ridge_fe_v1
+  target_week_offset: 1
+
+optimization:
+  max_changes_per_store: 4
+  max_same_category_per_store: 2
+  max_same_brand_share_pct: 50
+  low_confidence_threshold: 0.45
+  max_low_confidence_per_store: 1
+  strategic_categories_per_store: 1
+  time_limit_seconds: 15
+

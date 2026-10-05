@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "display-allocation-optimizer"
+version = "0.1.0"
+description = "Multi-store display resource efficiency and constrained allocation portfolio project"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "duckdb>=1.2,<2",
+  "numpy>=2,<3",
+  "ortools>=9.12,<10",
+  "pandas>=2.2,<4",
+  "plotly>=6,<7",
+  "pyarrow>=18,<25",
+  "requests>=2.32,<3",
+  "rdata>=1.0,<2",
+  "scikit-learn>=1.6,<2",
+  "streamlit>=1.45,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "ruff>=0.11,<1"]
+
+[project.scripts]
+display-opt = "display_optimizer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+

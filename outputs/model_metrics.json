@@ -1,0 +1,9 @@
+{
+  "model_version": "ridge_fe_v1",
+  "train_rows": 103307,
+  "test_rows": 25674,
+  "temporal_cutoff_week": 42,
+  "mae": 0.0524,
+  "r2": 0.6849,
+  "interpretation": "predictive validation; not a causal identification result"
+}
